@@ -1,0 +1,15 @@
+E:\Events\Events\Task1\bin\Debug\Task1.exe.config
+E:\Events\Events\Task1\bin\Debug\Task1.exe
+E:\Events\Events\Task1\bin\Debug\Task1.pdb
+E:\Events\Events\Task1\obj\Debug\Task1.csprojAssemblyReference.cache
+E:\Events\Events\Task1\obj\Debug\MainWindow.g.cs
+E:\Events\Events\Task1\obj\Debug\App.g.cs
+E:\Events\Events\Task1\obj\Debug\Task1_MarkupCompile.cache
+E:\Events\Events\Task1\obj\Debug\Task1_MarkupCompile.lref
+E:\Events\Events\Task1\obj\Debug\MainWindow.baml
+E:\Events\Events\Task1\obj\Debug\Task1.g.resources
+E:\Events\Events\Task1\obj\Debug\Task1.Properties.Resources.resources
+E:\Events\Events\Task1\obj\Debug\Task1.csproj.GenerateResource.cache
+E:\Events\Events\Task1\obj\Debug\Task1.csproj.CoreCompileInputs.cache
+E:\Events\Events\Task1\obj\Debug\Task1.exe
+E:\Events\Events\Task1\obj\Debug\Task1.pdb
