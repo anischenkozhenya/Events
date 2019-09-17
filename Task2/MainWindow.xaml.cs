@@ -1,16 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Threading;
 //using System.Windows.Shapes;
 //Используя Visual Studio, создайте проект по шаблону WPF Application.
@@ -23,31 +12,57 @@ namespace Task2
     /// </summary>
     public partial class MainWindow : Window
     {
-        DispatcherTimer dp;
+        public DispatcherTimer dt;
         public MainWindow()
         {
             InitializeComponent();
-            dp = new DispatcherTimer();
+            new Presenter(this);
+            dt = new DispatcherTimer();
+            dt.Interval=TimeSpan.FromMilliseconds(1);
+            dt.Tick += Dt_Tick;
         }
+                
+        private EventHandler tick = null;
         private EventHandler startTimer = null;
+        private EventHandler stopTimer = null;
+        private EventHandler resetTimer = null;
+        private void Dt_Tick(object sender, EventArgs e)
+        {
+            tick(sender, e);
+        }
+        public event EventHandler Tick
+        {
+            add { tick += value; }
+            remove { tick -= value; }
+        }
         public event EventHandler StartTimer
-            {
+        {
             add { startTimer += value; }
             remove { startTimer -= value; }
-            }
-        private void BtnStart_Click(object sender, RoutedEventArgs e)
+        }
+        public event EventHandler StopTimer
+        {
+            add { stopTimer += value; }
+            remove { stopTimer -= value; }
+        }
+        public event EventHandler ResetTimer {
+            add {resetTimer += value;}
+            remove {resetTimer -= value;}
+        }
+
+        private void BtnStart_Click(object sender,EventArgs e)
         {
             startTimer(sender,e);
         }
 
-        private void BtnStop_Click(object sender, RoutedEventArgs e)
+        private void BtnStop_Click(object sender,EventArgs e)
         {
-
+            stopTimer(sender, e);
         }
 
-        private void BtnReset_Click(object sender, RoutedEventArgs e)
+        private void BtnReset_Click(object sender,EventArgs e)
         {
-
+            resetTimer(sender, e);
         }
     }
 }

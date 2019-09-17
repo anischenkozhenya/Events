@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Task2"
+        xmlns:local="clr-namespace:Task2"        
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -19,6 +19,7 @@
         <Button Name="BtnStart" Grid.Row="1" Grid.Column="0" Margin="10,20,10,20" Content="Start" FontSize="60" Click="BtnStart_Click"></Button>
         <Button Name="BtnStop" Grid.Row="1" Grid.Column="1" Margin="10,20,10,20" Content="Stop" FontSize="60" Click="BtnStop_Click"></Button>
         <Button Name="BtnReset" Grid.Row="1" Grid.Column="2" Margin="10,20,10,20" Content="Reset" FontSize="60" Click="BtnReset_Click"></Button>
-        <Label Name="TimeLabel" Content="0" Grid.Column="1" Grid.Row="0" FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <Label Name="TimeLabel" Content="0" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"  FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        
     </Grid>
 </Window>

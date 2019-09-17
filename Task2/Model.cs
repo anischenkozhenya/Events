@@ -10,18 +10,16 @@ namespace Task2
     
     class Model
     {
-        int time;
-        public string Start(string str)
-        {            
-            return time.ToString();
-        }
-        public string Stop(string str)
+        private int s; 
+
+        public string Tick()
         {
-            return time.ToString();
+            s++;
+            return s >= 60 ? (s / 60) + " секунд " + s % 60 + " миллисекунд" : s.ToString();
         }
-        public string Reset(string str)
+        public void Reset()
         {
-            return time.ToString();
+            s = 0;
         }
     }
 }
