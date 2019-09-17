@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using System.Windows.Threading;
 //using System.Windows.Shapes;
 //Используя Visual Studio, создайте проект по шаблону WPF Application.
 //Создайте программу секундомер. Требуется выводить показания секундомера в окне. Окно имеет
@@ -22,14 +23,21 @@ namespace Task2
     /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer dp;
         public MainWindow()
         {
             InitializeComponent();
+            dp = new DispatcherTimer();
         }
-
+        private EventHandler startTimer = null;
+        public event EventHandler StartTimer
+            {
+            add { startTimer += value; }
+            remove { startTimer -= value; }
+            }
         private void BtnStart_Click(object sender, RoutedEventArgs e)
         {
-
+            startTimer(sender,e);
         }
 
         private void BtnStop_Click(object sender, RoutedEventArgs e)
